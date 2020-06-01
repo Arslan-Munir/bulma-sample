@@ -1,0 +1,162 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link href="bulma/css/bulma.css" rel="stylesheet"/>
+    
+    <style>
+    </style>
+  </head>
+  <body>
+    <nav class="navbar is-light">
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          Site
+        </a>
+        <a class="navbar-burger burger" data-target="Options">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div id="Options" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">Item 1</a>
+          <a class="navbar-item">Item 2</a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item">Item 1</a>
+              <a class="navbar-item">Item 2</a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item">Item 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="navbar-end">
+          <a class="navbar-item is-tab">Last item</a>
+        </div>
+      </div>
+    </nav>
+    <!-- <section class="hero is-success is-bold is-fullheight-with-navbar">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Title</h1>
+          <h2 class="subtitle">Subtitle</h2>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="section">
+      <div class="container is-fluid">
+        <!-- <div class="notification"> -->
+        <div>
+          <div class="columns is-multiline">
+            <div class="column is-3">
+              <article class="message is-success">
+                <div class="message-body">
+                  <p class="title is-4 is-spaced">This week's Orders</p>
+                  <p class="subtitle is-6"><strong>Total Orders: </strong>10</p>
+                  <p class="subtitle is-6"><strong>Processed Orders: </strong>8</p>
+                  <p class="subtitle is-6"><strong>Pending Orders: </strong>2</p>
+                </div>
+              </article>
+              <!-- <div class="box">
+                <p class="title is-4 is-spaced">This week's Orders</p>
+                <p class="subtitle is-6"><strong>Total Orders: </strong>10</p>
+                <p class="subtitle is-6"><strong>Processed Orders: </strong>8</p>
+                <p class="subtitle is-6"><strong>Pending Orders: </strong>2</p>
+              </div> -->
+            </div>
+            <div class="column is-three-quarters">
+              <div class="table-container">
+                <table class="table is-bordered is-striped is-hoverable is-fullwidth is-narrow">
+                  <thead>
+                    <tr>
+                      <th>No#</th>
+                      <th>Name</th>
+                      <th>Order Name</th>
+                      <th>Quantity</th>
+                      <th>Total Price</th>
+                      <th>Address</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>John</td>
+                      <td>Order 1</td>
+                      <td>1</td>
+                      <td>10</td>
+                      <td>NewYork</td>
+                    </tr>
+                    <tr class="is-selected">
+                      <td>2</td>
+                      <td>Smith</td>
+                      <td>Order 2</td>
+                      <td>3</td>
+                      <td>30</td>
+                      <td>Pennsylvania</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Mith</td>
+                      <td>Order 3</td>
+                      <td>2</td>
+                      <td>20</td>
+                      <td>Alabama</td>
+                    </tr>
+                  </thead>
+                </table>  
+              </div>
+              <nav class="pagination is-small is-rounded is-centered" role="navigation" aria-label="pagination">
+                <!-- <a class="pagination-previous">Previous</a>
+                <a class="pagination-next">Next page</a> -->
+                <ul class="pagination-list">
+                  <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+                  <li><span class="pagination-ellipsis">&hellip;</span></li>
+                  <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+                  <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+                  <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+                  <li><span class="pagination-ellipsis">&hellip;</span></li>
+                  <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="column is-3">This month orders</div>
+            <div class="column is-three-quarters">Orders goes here</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+          // Add a click event on each of them
+          $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+
+              // Get the target from the "data-target" attribute
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+
+            });
+          });
+        }
+
+      });
+  </script>
+</html>
